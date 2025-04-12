@@ -21,6 +21,9 @@ services:
     # container_name: "docker-template-laravel-php"
     build:
       context: "./docker/php"
+    ports:
+      # Viteのポートを追加する
+      - "5173:5173"
     volumes:
       - "./src:/var/www/html"
 
